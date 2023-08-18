@@ -1,0 +1,26 @@
+.filters-bar {
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+
+  @screen lg {
+    grid-template-columns: auto auto auto 1fr auto;
+  }
+}
+
+.filters-bar__collapse {
+  grid-row-start: 2;
+  grid-column: 1 / -1;
+
+  @screen lg {
+    grid-row-start: 2;
+    grid-column: 1 / -1;
+  }
+}
+
+.filters-bar__search {
+  grid-column: 1 / -1;
+
+  @screen lg {
+    grid-column-start: 5;
+  }
+}

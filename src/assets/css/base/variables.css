@@ -1,0 +1,16 @@
+:host {
+  --agd-color-primary: #444;
+  --agd-color-accent: #222;
+  --agd-color-depth: #eee;
+  --agd-color-warning: #996600;
+  --agd-color-danger: #ae1820;
+
+  --agd-text-color-negative: #fff;
+
+  --agd-link-color: var(--agd-color-primary);
+
+  --agd-border-color: #999;
+  --agd-border-radius: 100px;
+
+  accent-color: var(--agd-color-primary);
+}

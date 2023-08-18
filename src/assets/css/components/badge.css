@@ -1,0 +1,13 @@
+.badge {
+  color: var(--agd-badge-color, var(--agd-text-color-negative));
+
+  border-radius: var(--agd-badge-border-radius, var(--agd-border-radius));
+}
+
+.badge--warning {
+  background-color: var(--agd-badge-warning-bg-color, var(--agd-color-warning));
+}
+
+.badge--danger {
+  background-color: var(--agd-badge-danger-bg-color, var(--agd-color-danger));
+}

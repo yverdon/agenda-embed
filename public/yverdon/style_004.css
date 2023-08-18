@@ -1,0 +1,141 @@
+/*ADVANCED FAQ*/
+
+.tx-wng-advanced-faq .tx_wngadvancedfaq{
+	padding-left:40px;
+	padding-top:25px;
+	padding-bottom:25px;
+	margin:0;
+	list-style:none;
+	border-left:dashed 1px #bec8d5;
+	margin-bottom:70px
+}
+
+.tx_wngadvancedfaq.all-question{
+	padding-left:0;
+	border-left:none;
+}
+/* .list-article-body {
+    padding: 20px 30px;
+} */
+.tx-wng-advanced-faq .tx_wngadvancedfaq li{
+	padding:10px 0px;
+}
+
+.tx-wng-advanced-faq .tx_wngadvancedfaq li:first-child{
+	padding-top:0;
+}
+
+.tx-wng-advanced-faq .tx_wngadvancedfaq li:last-child{
+	padding-bottom:0;
+}
+
+.btn-listall, .back-list{
+	font-size: 16px;
+  	font-weight: normal;
+  	text-transform: uppercase;
+  	letter-spacing: 0.5px;
+  	color: #273142;
+  	transition: 0.3s;
+  	margin-top:35px;
+  	display: inline-block;
+}
+
+.btn-listall:hover, .back-list:hover{
+  	color: #008c6f;
+}
+
+.btn-listall i, .back-list i{
+	font-size:17px;
+	color:#008c6f;
+	position: relative;
+	top:1px;
+}
+
+.back-list{
+	margin-left:30px;
+}
+
+.back-list.btn-line:after{
+    content: "\e907";
+    font-family: 'icomoon' !important;
+    position: absolute;
+    font-size: 19px;
+    left: -30px;
+    top: 50%;
+    padding-left: 0;
+    transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateY(-50%);
+    font-weight: 600;
+}
+
+.back-list.btn-line:hover:after{
+	left:-40px;
+	right:inherit;
+}
+
+.lightgallery{
+	width:100%;
+}
+
+.lightgallery img{
+	width:100%;
+	height:auto;
+}
+
+.tx-wng-advanced-faq .lightgallery{
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.category-show{
+	margin-bottom:18px;
+}
+
+.category-show .badge{
+	margin: 0 3px;
+}
+
+.category-show .badge:first-of-type{
+	margin-left:0;
+}
+
+.category-show .badge:last-of-type{
+	margin-right:0;
+}
+
+.category-show .badge {
+    display: inline-block;
+    padding: 5px 10px 4px 10px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 2px ;
+    border: 1px solid #008c6f;
+    color:#008c6f;
+}
+
+.btn-faq{
+	margin-top:30px;
+}
+
+
+@media screen and (max-width: 767px) {
+	.tx-wng-advanced-faq .tx_wngadvancedfaq {
+	    padding-left: 20px;
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	    margin-bottom: 40px;
+	}
+
+	.btn-listall, .back-list {
+	    font-size: 12px;
+	    margin-top: 20px;
+	}
+
+	.btn-listall i, .back-list i {
+	    font-size: 13px;
+	}
+}

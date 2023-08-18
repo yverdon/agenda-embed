@@ -1,0 +1,943 @@
+.margint8 {
+    margin-top: 8px;
+    display: block;
+}
+
+.marginb8 {
+    margin-bottom: 8px;
+}
+.valide_selec {
+    font-size: 16px !important ;
+}
+.alertmsg {
+    background-color: #fcf8e3;
+
+    color: #8a6d3b;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #fcf8e3;
+    border-radius: .25rem;
+}
+
+.alertmsg.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.formclub {
+    padding-left: 0 !important;
+}
+
+.formclub input, .formclub textarea,
+.formclub .select2-container,
+.formclub .no_dropdowns,
+.formclub input,
+.formclub .hiddenlabel, .tx-wng-sport .cke , .formclub .pcispresident  , .formclub .copresident{
+    margin-bottom: 35px;
+}
+.tx-wng-sport ::placeholder {
+  color: #d8dee3 !important;
+}
+
+.tx_sport {
+    padding: 33px 33px 31px 33px;
+    background: #f1f4f8;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+}
+.tx_sport .isclub {
+    text-align: center;
+    margin: 0 auto 35px;
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    font-size: 14px;
+}
+.tx_sport .isclub:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 8px auto;
+    width: 30px;
+    height: 1px;
+    background: #bec8d5;
+    top: 23px;
+
+}
+.tx_sport a {
+    transition: none;
+}
+
+.formclub .clear  , .memberstype .clear  {
+    clear: both;
+}
+
+.tx_sport:hover {
+    background: #008c6f;
+    color: #fff;
+}
+
+.tx_sport:hover a {
+    color: #fff;
+}
+
+.tx_sport:hover hr {
+    border-color: #fff;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.tx_sport .tx_sport_image,
+.tx_sport .tx_sport_image img {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.tx_sport .tx_sport_title {
+    padding-top: 30px;
+    font-size: 22px;
+
+    text-align: center;
+    text-transform: unset;
+    font-weight: 500;
+}
+
+.tx_sport .tx_sport_categorie {
+    text-align: center;
+    font-weight: 600;
+    padding-top: 9px;
+    font-size: 14px;
+}
+
+.tx_sport hr {
+    border: 1px dashed #bec8d5;
+    margin-bottom: 13px;
+    margin-top: 28px;
+    border-top: 0;
+
+}
+
+.tx_sport .tx_sport_adresse, .tx_sport_single .tx_sport_adresse {
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+
+.tx_sport .map, .tx_sport_single .map {
+    float: left;
+    font-size: 23px;
+    margin-top: 2px
+}
+
+.tx-wng-sport .rowbox .f3-widget-paginator {
+    position: absolute;
+    bottom: -85px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+
+}
+
+.tx-wng-sport .rowbox {
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.tx-wng-sport .rowbox a:not(.linktomap) {
+    color: inherit;
+}
+
+.tx-wng-sport .rowbox .f3-widget-paginator li {
+    width: 45px;
+    text-align: center;
+    margin: 0px -2px;
+    font-size: 22px;
+    padding: 15px 0;
+    border-bottom: 2px solid #dfe2e5;
+    display: inline-block;
+}
+
+.tx-wng-sport .rowbox .f3-widget-paginator li a {
+    color: #354052;
+}
+
+.tx-wng-sport .rowbox .f3-widget-paginator li.current {
+    border-color: #008c6f;
+}
+
+.tx-wng-sport .rowbox .f3-widget-paginator li.next {
+    margin-left: 5px;
+}
+
+.tx-wng-sport .rowbox .f3-widget-paginator li.previous {
+    margin-right: 5px;
+}
+
+.title_sport {
+    text-align: center;
+    margin: 55px auto 40px auto;
+}
+
+.search-filter-box h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.search-filter-box .choosen_filter {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    flex-wrap: wrap;
+}
+
+.search-filter-box ul.filter-list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.search-filter-box ul.filter-list li a {
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    background: #ebf0f7;
+    display: inline-block;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+}
+
+.search-filter-box ul.choosen_filter li a:hover, .search-filter-box ul.choosen_filter li a.active,
+.search-filter-box ul.filter-list li a:hover, .search-filter-box ul.filter-list li a.active {
+    box-shadow: 0 2px 11px 0px rgba(0, 140, 111, 0.3);
+    background: #008c6f;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-filter-box ul.choosen_filter li a {
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    background: #8c9ba5;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-right: 10px;
+    margin-bottom: 18px;
+    padding: 13px 37px;
+}
+
+.search-filter-box ul.choosen_filter li a i {
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.search-filter-box .searchform {
+    text-align: center;
+}
+
+.search-filter-box .searchform input[type="text"] {
+    width: 50%;
+    -webkit-box-shadow: 0 2px 11px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 11px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 11px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    padding: 20px 20px 18px 20px;
+    border-radius: 3px;
+    font-size: 18px
+
+}
+
+.search-filter-box .searchform input[type="text"]:focus {
+    -webkit-box-shadow: 0 2px 11px 0px rgba(0, 140, 111, 0.3);
+    -moz-box-shadow: 0 2px 11px 0px rgba(0, 140, 111, 0.3);
+    box-shadow: 0 2px 11px 0px rgba(0, 140, 111, 0.3);
+}
+
+.search-filter-box .searchform .btn .icon-search {
+    font-size: 24px;
+    margin-top: -6px;
+    display: block;
+}
+
+.search-filter-box .searchform .btn {
+    margin-left: -4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search-filter-box .searchform .btnsearch {
+    border-radius: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 18px 40px 16px 40px;
+    line-height: 14px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 15px auto 40px;
+    display: block;
+}
+
+.shadow {
+    position: relative;
+    width: 1px;
+    margin: 0 auto 40px;
+}
+
+.shadow span {
+    position: absolute;
+    background: url(/fileadmin/user_upload/shaddow.jpg);
+    height: 35px;
+    width: 100vw;
+    left: -50vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*   Single   */
+
+.tx_sport_single h1 {
+    margin: 0 0 20px 0;
+    text-transform: initial;
+}
+.tx_sport_single .isclub {
+    margin-top: 65px;
+    font-size: 14px;
+    margin-bottom: 32px;
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+}
+.tx_sport_single .isclub:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 3px;
+    margin-bottom: 10px ;
+    width: 30px;
+    height: 1px;
+    background: #bec8d5;
+    top: 30px;
+}
+.tx_sport_single .logosingle {
+    margin: 65px auto;
+}
+
+.tx_sport_single .single_categories span {
+    float: left;
+}
+
+.tx_sport_single .single_categories {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.2;
+    padding-bottom: 30px;
+}
+
+.tx_sport_single .contact-box {
+    margin-top: 40px;
+}
+
+.tx_sport_single .contact-box li {
+    border: none !important;
+    clear: both;
+}
+
+.tx_sport_single .contact-box ul li .contact-line {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tx_sport_single .contact-box ul li .contact-line .icon-contact-line {
+    width: 36px;
+}
+
+.tx_sport_single .contact-box ul li .contact-line .icon-contact-line i {
+    font-size: 22px;
+}
+
+.tx_sport_single .contact-box ul li .contact-line .text-contact-line {
+    font-size: 20px;
+}
+
+.tx_sport_single .contact-box .contact-line:hover a, .tx_sport_single .contact-box .contact-line:hover i, .tx_sport_single .contact-box .contact-line:hover p {
+    color: #1865b5;
+}
+
+/*
+.tx_sport_single .more_informations {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 60px;
+    font-size: 20px;
+}*/
+.tx_sport_single .descriptionclub {
+    display: inline-block;
+    margin-bottom: 55px;
+    clear: both;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.tx_sport_single .descriptionclub p {
+    font-size: 20px;
+}
+
+/*
+.tx_sport_single .more_informations li {
+    margin-bottom: 20px;
+}
+
+.tx_sport_single .more_informations .tel,
+.tx_sport_single .more_informations .mail ,
+.tx_sport_single .more_informations .adress {
+    width: 50%;
+    float: left;
+    display: table;
+
+}
+
+.tx_sport_single .more_informations li i {
+    margin-right: 22px;
+    float: left;
+    margin-bottom: 10px;
+    display: block;
+    margin-top: 3px;
+}
+.tx_sport_single .more_informations .adress i {
+   margin-top: -4px;
+}*/
+.tx_sport_single .bg_member {
+    width: 350px;
+    background: #f1f4f8;
+    padding: 26px;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.tx_sport_single .private .bg_member {
+    background: #fff;
+    border: 4px solid #f1f4f8;
+}
+
+.tx_sport_single hr {
+    border-top: 1px solid #dfe2e5;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+.tx_sport_single p {
+    font-size: 20px;
+}
+
+.tx_sport_single .bg_member .pcfonction,
+.tx_sport_single .bg_member .presidenttel,
+.tx_sport_single .bg_member .pcemail {
+    min-height: 30px;
+    display: block;
+    clear: both;
+}
+
+.tx_sport_single .memberstype i {
+    font-size: 32px;
+    margin-left: 5px;
+}
+
+.tx_sport_single .memberstype p {
+    font-size: 32px;
+    float: left;
+    margin-right: 62px;
+}
+
+.tx_sport_single .memberstype {
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.tx_sport_single .memberstype .memberstypeg{
+    margin-top: -9px;
+}
+.tx_sport_single .memberstype .memberstypej{
+    margin-top: -15px ;
+}
+.tx_sport_single .bg_member:not(.entraineurs) ul {
+    padding-left: 0;
+}
+
+.tx_sport_single .bg_member:not(.entraineurs) ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.tx_sport_single .bg_member.entraineurs ol li,
+.tx_sport_single .bg_member.entraineurs ul li {
+    margin: 15px 0;
+}
+
+.bg_member h5 {
+    font-size: 22px;
+}
+
+.tx_sport_single .bg_member hr {
+    border-style: dashed;
+    margin-bottom: 13px;
+}
+
+.bg_member.autowitdh {
+    width: 100%;
+}
+
+.tx_sport_single .bg_member a.btn,
+.tx_sport_single .bg_member button.btn,
+.tx_sport_single .bg_member span.btn {
+    background-color: #8c9ba5;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 10px;
+    padding: 3px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 18px;
+    cursor: auto;
+}
+
+.tx_sport_single .bg_member a.btn:hover,
+.tx_sport_single .bg_member button.btn:hover,
+.tx_sport_single .bg_member span.btn:hover {
+    color: #fff;
+}
+
+.tx_sport_single .bg_member ul.listcommission button.btn {
+    margin-top: -15px;
+}
+
+.tx_sport_single .bg_member ul.listcommission li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
+.tx_sport_single .bg_member ul.listcommission span {
+    font-weight: normal;
+    width: 165px;
+    float: left;
+}
+
+.tx_sport_single .bg_member ul.listinst {
+    margin-top: 10px;
+}
+
+.tx_sport_single .bg_member ul.listinst li span {
+    width: 165px;
+    display: inline;
+}
+
+.tx_sport_single .bg_member ul.listinst li .insproprietaire,
+.tx_sport_single .bg_member ul.listinst li .insproprietaire * {
+    display: inline;
+}
+
+.tx_sport_single .isprofessionel {
+    color: #008c6f;
+    font-style: italic;
+}
+
+.tx_sport_single .bg_member .manifestationdetail i,
+.tx_sport_single .bg_member .insedit, .tx_sport_single .bg_member .comedit {
+    position: absolute;
+    right: 35px;
+    top: 18px;
+
+}
+
+.tx_sport_single .bg_member .manifestationdetail {
+    margin-right: 18px;
+}
+
+.tx_sport_single .bg_member .manifestationdetail h5 {
+    text-transform: uppercase;
+}
+
+.tx_sport_single .bg_member .manifestationdetail ul {
+    margin-top: 7px;
+}
+
+.tx_sport_single .bg_member .manifestationdetail ul li {
+    display: block;
+}
+
+.tx_sport_single .bg_member .manifestationdetail ul li span {
+    width: 190px;
+    float: left;
+}
+
+.tx_sport_single .bg_member .manifestationlieu {
+    clear: both;
+}
+
+.tx_sport_single .bg_member .affichmanifesation {
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.tx_sport_single .bg_member p {
+    margin-bottom: 10px;
+}
+
+/* General */
+.margin-top15 {
+    margin-top: 15px;
+}
+
+.margin-bottom15 {
+    margin-bottom: 15px;
+}
+
+/*  botton back to list   */
+.back_tolist {
+    color: #273142;
+    font-weight: 600;
+    margin-top: 30px;
+    display: block;
+}
+
+.back_tolist span {
+    border-bottom: 2px solid #008c6f;
+    padding-bottom: 3px;
+}
+
+.back_tolist i {
+    margin-right: 7px;
+}
+
+.tx_wngsubvtable td p {
+    margin-bottom: 0 !important;
+}
+
+.tx_wngsubvtable tr th {
+    background: transparent;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+.tx_wngsubvtable thead, .tx_wngsubvtable tr td {
+    border: none;
+}
+
+.tx_wngsubvtable .status_2 {
+    display: block;
+    padding: .35rem 1.25rem;
+    border: 1px solid #c3e6cb;
+    border-radius: .25rem;
+    background-color: #d4edda;
+    color: #155724;
+
+    width: 205px;
+    text-align: center;
+}
+
+.tx_wngsubvtable .status_1 {
+    color: #856404;
+    display: block;
+    padding: .35rem 1.25rem;
+    border: 1px solid #ffeeba;
+    border-radius: .25rem;
+    background-color: #ffeeba;
+    width: 205px;
+    text-align: center;
+}
+
+.tx_wngsubvtable .status_0 {
+    color: #0c5460;
+    display: block;
+    padding: .35rem 1.25rem;
+    border: 1px solid #d1ecf1;
+    border-radius: .25rem;
+    background-color: #d1ecf1;
+    width: 205px;
+    text-align: center;
+}
+
+.sub_tab_2 {
+    display: none;
+}
+
+/* LIST MANIFESATION  */
+.tx_wngsporttable, .tx_wngsubvtable {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    width: 100%;
+}
+
+.tx_wngsporttable thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tx_wngsporttable td, .tx_wngsporttable th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    border-right: none;
+    border-left: none;
+}
+
+.breadcrumb i:nth-child(4n +1) {
+    display: none;
+}
+
+.private,
+.private h3,
+.private p {
+    color: #4582af;
+}
+
+.private .bg_member button.btn {
+    background: #4582af;
+}
+
+.upload-hint {
+    margin-top: 47px;
+    position: absolute;
+    margin-left: 5px;
+    line-height: 1;
+    color: #aaa;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.btn-addath {
+    margin-bottom: 10px !important;
+
+}
+.btn-addathprest {
+
+    float: left;
+    margin-right: 30px;
+}
+h4.listmyclub {
+    margin-top: 20px;
+}
+
+.reglementpdf {
+    margin-top: -34px;
+    margin-left: 2px;
+    font-size: 14px;
+    position: absolute;
+}
+
+.validateclub {
+    float: left;
+    margin-right: 20px;
+}
+
+.validateclub:hover {
+    background: #1865b5;
+    color: #fff;
+}
+
+.type_4, .intro, .type_1, .type_2, .type_3, .submitsub {
+    display: none;
+}
+
+.ajaxpc {
+    margin-bottom: 20px;
+}
+.hidefirst:first-child  {
+    display:none ;
+}
+.marginr15 {
+    margin-right: 15px;
+}
+.presidentblock ,.copresidentblock {
+    display:none;
+}
+.margintop65 {
+    margin-top: 65px !important;
+}
+.manifphone{
+    margin-bottom: 15px;
+}
+.manifphone i {
+    float: left;
+    font-size: 23px;
+}
+.manifphone  span {
+    margin-left: 18px;
+}
+.ifempty {
+    color: #354052;
+}
+.memberstype_categories {
+    margin-bottom: 0 !important ;
+}
+.refusedupdate {
+    color: #f00;
+    font-style: italic;
+    font-size: 14px;
+}
+.searchform	.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+}
+
+.searchform	.autocomplete-items {
+    position: absolute;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 70px;
+    left: 26%;
+
+    width: 48%;
+    text-align: left;
+    -webkit-box-shadow: 0 2px 11px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 11px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 11px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+.searchform	.autocomplete-items div {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.searchform	.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+/*  RESPONSIVE */
+@media (max-width: 1280px) {
+    .search-filter-box ul.filter-list li a {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+}
+@media (max-width: 1200px) {
+    .tx_sport_single .bg_member .manifestationdetail ul li span {
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .tx_sport_single .bg_member .manifestationdetail {
+        width: 100%;
+    }
+
+    .tx_sport_single .bg_member .affichmanifesation {
+        width: auto;
+        float: none;
+        margin-left: 0;
+    }
+
+    .tx_wngsubvtable {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .tx_sport_single .bg_member {
+        width: 100%;
+    }
+
+    .tx_wngsubvtable {
+        white-space: nowrap;
+    }
+
+    .tx_sport_single .bg_member.entraineurs ol li, .tx_sport_single .bg_member.entraineurs ul li {
+        width: 100%;
+    }
+
+    .tx_sport_single .descriptionclub, .tx_sport_single .descriptionclub p {
+        font-size: 18px;
+    }
+
+    .tx_sport_single hr {
+        margin-bottom: 20px;
+    }
+
+    .tx_sport_single .bg_member {
+        margin-bottom: 20px;
+    }
+
+    .search-filter-box ul.filter-list li a {
+        font-size: 14px;
+        padding: 10px 16px;
+        margin: 5px;
+    }
+
+    .search-filter-box .searchform input[type="text"] {
+        width: 100%;
+    }
+
+    .validateclub {
+        white-space: normal !important;
+        line-height: 1.2 !important;
+    }
+}
+
+@media (min-width: 991px) {
+    .col-w3 {
+        width: 33.3% !important;
+    }
+
+    .col-w2 {
+        width: 49.8% !important;
+    }
+
+    .tx_sport_single .contact-box .contact-line.left {
+        width: 50%;
+        float: left;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 770px) {
+
+    .co_president {
+        margin-top: 70px;
+        display: block;
+    }
+}
