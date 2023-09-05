@@ -13,10 +13,10 @@
             class="flex gap-2 items-baseline"
           >
             <input
-              type="checkbox"
               :id="`filter-${filter.slug}-${option.id}`"
-              :value="option.id"
               v-model="activeFilters.categories[filter.slug]"
+              type="checkbox"
+              :value="option.id"
             />
             {{ option.label }}
           </label>

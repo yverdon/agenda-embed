@@ -1,0 +1,33 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  column-gap: theme('spacing.1');
+
+  padding: theme('spacing.1') theme('spacing.3');
+  overflow: hidden;
+
+  color: var(--agd-pill-color, var(--agd-color-primary));
+  font-size: theme('fontSize.base');
+  line-height: theme('lineHeight.tight');
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  border-width: var(--agd-pill-border-width, 1px);
+  border-style: var(--agd-pill-border-style, solid);
+  border-color: var(--agd-pill-border-color, var(--agd-color-primary));
+
+  border-radius: var(--agd-pill-border-radius, var(--agd-border-radius));
+
+  a&,
+  button& {
+    &:hover {
+      text-decoration: none;
+
+      color: var(--agd-pill-hover-color, var(--agd-text-color-negative));
+      background-color: var(
+        --agd-pill-hover-bg-color,
+        var(--agd-color-primary)
+      );
+    }
+  }
+}

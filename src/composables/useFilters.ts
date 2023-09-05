@@ -43,9 +43,38 @@ export default function useFilters() {
     availableFilters.value = filters;
   }
 
+  function resetDates(): void {
+    activeFilters.startsAt = null;
+    activeFilters.endsAt = null;
+  }
+
+  function resetQuery(): void {
+    activeFilters.query = '';
+  }
+
+  function resetCategories(): void {
+    const categories: ActiveFilters['categories'] = {};
+
+    availableFilters.value.forEach((f) => {
+      categories[f.slug] = [];
+    });
+
+    activeFilters.categories = categories;
+  }
+
+  function resetAll() {
+    resetDates();
+    resetQuery();
+    resetCategories();
+  }
+
   return {
     availableFilters,
     activeFilters,
     updateFilters,
+    resetDates,
+    resetQuery,
+    resetCategories,
+    resetAll,
   };
 }

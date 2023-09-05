@@ -32,11 +32,11 @@
         :class="{ active: quickDate === 'today' }"
       >
         <input
-          type="radio"
           id="today"
+          v-model="quickDate"
+          type="radio"
           value="today"
           name="quick-dates"
-          v-model="quickDate"
         />
         Aujourd’hui
       </label>
@@ -46,11 +46,11 @@
         :class="{ active: quickDate === 'tomorrow' }"
       >
         <input
-          type="radio"
           id="tomorrow"
+          v-model="quickDate"
+          type="radio"
           value="tomorrow"
           name="quick-dates"
-          v-model="quickDate"
         />
         Demain
       </label>
@@ -60,11 +60,11 @@
         :class="{ active: quickDate === 'weekend' }"
       >
         <input
-          type="radio"
           id="weekend"
+          v-model="quickDate"
+          type="radio"
           value="weekend"
           name="quick-dates"
-          v-model="quickDate"
         />
         Ce week-end
       </label>
@@ -74,11 +74,11 @@
         :class="{ active: quickDate === 'week' }"
       >
         <input
-          type="radio"
           id="week"
+          v-model="quickDate"
+          type="radio"
           value="week"
           name="quick-dates"
-          v-model="quickDate"
         />
         Cette semaine
       </label>
@@ -95,7 +95,7 @@
         filtersOpen = false;
       "
     >
-      Choisir une date
+      Choisir une période
       <div class="ml-auto">
         <NavArrowUp v-if="datesOpen" />
         <NavArrowDown v-else />
@@ -107,16 +107,16 @@
       id="dates-collapse"
       class="filters-bar__collapse p-5 bg-depth"
     >
-      <div class="flex flex-wrap items-end gap-y-3 gap-x-6 lg:gap-x-12">
+      <div class="flex flex-wrap items-end gap-6 lg:gap-x-12">
         <div class="flex-auto w-full md:w-auto md:max-w-[220px]">
           <label for="date-from" class="block mb-3 font-bold text-lg">
             Date de début
           </label>
           <input
-            type="date"
             id="date-from"
-            name="date-from"
             v-model="activeFilters.startsAt"
+            type="date"
+            name="date-from"
             class="field"
           />
         </div>
@@ -126,16 +126,20 @@
             Date de fin
           </label>
           <input
-            type="date"
             id="date-to"
-            name="date-to"
             v-model="activeFilters.endsAt"
+            type="date"
+            name="date-to"
             class="field"
           />
         </div>
 
         <div class="flex-auto">
-          <button type="reset" class="btn p-0 btn--link" @click="resetDates">
+          <button
+            type="button"
+            class="btn btn--link px-0 sm:min-h-[45px]"
+            @click="resetDates"
+          >
             <Cancel /> Réinitialiser les dates
           </button>
         </div>
@@ -146,14 +150,22 @@
       <label for="search" class="sr-only">Rechercher</label>
       <div class="relative flex items-center">
         <input
-          type="search"
           id="search"
+          v-model="activeFilters.query"
+          type="search"
           name="search"
           placeholder="Rechercher"
-          v-model="activeFilters.query"
-          class="field pl-10"
+          class="field px-10"
         />
         <Search class="absolute left-3 pointer-events-none" />
+        <button
+          v-if="activeFilters.query"
+          type="button"
+          class="p-3 absolute right-0"
+          @click="activeFilters.query = ''"
+        >
+          <Cancel />
+        </button>
       </div>
     </div>
   </div>
