@@ -20,7 +20,15 @@ export default defineConfig({
     },
   },
 
-  plugins: [vue()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          whitespace: 'preserve',
+        },
+      },
+    }),
+  ],
 
   server: {
     port: 3000,

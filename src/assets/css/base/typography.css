@@ -21,3 +21,12 @@ h6,
 label {
   cursor: pointer;
 }
+
+a {
+  color: var(--agd-link-color, var(--agd-color-primary));
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

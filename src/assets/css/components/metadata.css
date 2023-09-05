@@ -1,0 +1,12 @@
+.metadata {
+  border-top: var(--agd-metadata-border-width, 1px);
+  border-bottom: var(--agd-metadata-border-width, 1px);
+  border-style: var(--agd-metadata-border-style, solid);
+  border-color: var(--agd-metadata-border-color, var(--agd-color-depth-dark));
+}
+
+.metadata__item + .metadata__item {
+  border-top: var(--agd-metadata-border-width, 1px);
+  border-color: inherit;
+  border-style: inherit;
+}

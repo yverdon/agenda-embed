@@ -1,4 +1,4 @@
-import { dateFormatter } from '@/helpers/date';
+import { humanizeDatesPair } from '@/helpers/date';
 
 import type { Feature } from '@/services/types';
 
@@ -9,7 +9,7 @@ export enum EventStatus {
   SOLDOUT = 'SOLDOUT',
 }
 
-export type RawEventLight = Feature<{
+export type RawEventLightProps = {
   id: number;
   title: string;
   poster: {
@@ -22,9 +22,13 @@ export type RawEventLight = Feature<{
   location: string | null;
   status: EventStatus | null;
   featured: boolean;
-}>;
+};
 
-export default class EventLight extends Model<RawEventLight> {
+export type RawEventLight = Feature<RawEventLightProps>;
+
+export default class EventLight<
+  T extends RawEventLight = RawEventLight,
+> extends Model<T> {
   get id() {
     return this.model.id;
   }
@@ -37,36 +41,8 @@ export default class EventLight extends Model<RawEventLight> {
     return this.model.poster;
   }
 
-  get startsAt() {
-    return new Date(this.model.starts_at);
-  }
-
-  get startsAtFormatted() {
-    return dateFormatter.format(this.startsAt);
-  }
-
-  get endsAt() {
-    return new Date(this.model.ends_at);
-  }
-
-  get endsAtFormatted() {
-    return dateFormatter.format(this.endsAt);
-  }
-
-  get datesFormatted() {
-    if (this.model.starts_at === this.model.ends_at) {
-      return this.startsAtFormatted;
-    }
-    if (this.startsAt.getFullYear() !== this.endsAt.getFullYear()) {
-      return `Du ${this.startsAtFormatted} au ${this.endsAtFormatted}`;
-    }
-    if (this.startsAt.getMonth() !== this.endsAt.getMonth()) {
-      return `Du ${new Intl.DateTimeFormat('fr-CH', {
-        day: 'numeric',
-        month: 'short',
-      }).format(this.startsAt)} au ${this.endsAtFormatted}`;
-    }
-    return `Du ${this.startsAt.getDate()} au ${this.endsAtFormatted}`;
+  get datesHumanized() {
+    return humanizeDatesPair(this.model.starts_at, this.model.ends_at);
   }
 
   get location() {

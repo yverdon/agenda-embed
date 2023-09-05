@@ -2,7 +2,7 @@
   <IconoirProvider
     :icon-props="{
       color: 'currentColor',
-      'stroke-width': 2,
+      'stroke-width': 1.5,
       width: 20,
       height: 20,
     }"

@@ -3,23 +3,41 @@ import 'dayjs/locale/fr';
 import weekday from 'dayjs/plugin/weekday';
 
 dayjs.extend(weekday);
+dayjs.locale('fr');
 
-export const dateFormatter = new Intl.DateTimeFormat('fr-CH', {
-  dateStyle: 'medium',
-});
-
-export const DATE_FORMAT = 'YYYY-MM-DD';
+export const DATE_FORMAT_HUMAN = 'D MMM YYYY';
+export const DATE_FORMAT_ISO = 'YYYY-MM-DD';
 
 export function formatDate(date: Dayjs) {
-  return date.format(DATE_FORMAT);
+  return date.format(DATE_FORMAT_HUMAN);
+}
+
+export function formatDateIso(date: Dayjs) {
+  return date.format(DATE_FORMAT_ISO);
+}
+
+export function humanizeDatesPair(s: string, e: string): string {
+  const start = dayjs(s);
+  const end = dayjs(e);
+
+  if (s === e) {
+    return formatDate(start);
+  }
+  if (start.year() !== end.year()) {
+    return `Du ${formatDate(start)} au ${formatDate(end)}`;
+  }
+  if (start.month() !== end.month()) {
+    return `Du ${start.format('D MMM')} au ${formatDate(end)}`;
+  }
+  return `Du ${start.format('D')} au ${formatDate(end)}`;
 }
 
 export function today() {
-  return formatDate(dayjs());
+  return formatDateIso(dayjs());
 }
 
 export function tomorrow() {
-  return formatDate(dayjs().add(1, 'day'));
+  return formatDateIso(dayjs().add(1, 'day'));
 }
 
 export function weekend() {
@@ -40,7 +58,7 @@ export function weekend() {
     sunday = dayjs().weekday(7);
   }
 
-  return { start: formatDate(saturday), end: formatDate(sunday) };
+  return { start: formatDateIso(saturday), end: formatDateIso(sunday) };
 }
 
 export function week() {
@@ -62,5 +80,5 @@ export function week() {
     sunday = today.weekday(7);
   }
 
-  return { start: formatDate(monday), end: formatDate(sunday) };
+  return { start: formatDateIso(monday), end: formatDateIso(sunday) };
 }

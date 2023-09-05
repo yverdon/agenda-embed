@@ -12,7 +12,7 @@ const features: RawEventLight[] = [
       id: 1,
       title: 'Castrum Festival',
       poster: {
-        src: '/uploads/Blaise-Bersinger_Pain-surprise_cA-la-Volette-1365x2048.jpg',
+        src: '/uploads/castrum.jpg',
         width: 1365,
         height: 2048,
       },

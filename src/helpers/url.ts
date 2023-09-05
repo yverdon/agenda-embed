@@ -17,3 +17,13 @@ export function buildParams(
 
   return params.toString();
 }
+
+export function getHostname(url?: string | null): string | null {
+  if (!url) return null;
+
+  try {
+    return new URL(url).hostname.replace('www.', '');
+  } catch (e) {
+    return url;
+  }
+}

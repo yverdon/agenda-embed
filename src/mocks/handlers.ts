@@ -7,6 +7,7 @@ import {
   rest,
 } from 'msw';
 
+import events from './fixtures/events';
 import eventsLight from './fixtures/eventsLight';
 
 const PAGINATION_SIZE = 3;
@@ -62,6 +63,15 @@ export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
       events.next = `/api/events/?page=${page + 1}`;
     }
 
-    return res(ctx.status(200), ctx.json(events));
+    return res(ctx.delay(300), ctx.status(200), ctx.json(events));
+  }),
+
+  rest.get('/api/events/:id', (req, res, ctx) => {
+    const event = events.find((e) => e.properties.id === Number(req.params.id));
+    if (event) {
+      return res(ctx.delay(300), ctx.status(200), ctx.json(event));
+    } else {
+      return res(ctx.status(404));
+    }
   }),
 ];
