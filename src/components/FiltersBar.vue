@@ -151,11 +151,12 @@
       <div class="relative flex items-center">
         <input
           id="search"
-          v-model="activeFilters.query"
+          :value="activeFilters.query"
           type="search"
           name="search"
           placeholder="Rechercher"
           class="field px-10"
+          @input="handleQueryChange(($event.target as HTMLInputElement).value)"
         />
         <Search class="absolute left-3 pointer-events-none" />
         <button
@@ -174,6 +175,7 @@
 <script lang="ts" setup>
 import { NavArrowDown, NavArrowUp } from '@iconoir/vue';
 import { Cancel, Search } from '@iconoir/vue';
+import { useDebounceFn } from '@vueuse/core/index.cjs';
 import { ref, watch } from 'vue';
 
 import { today, tomorrow, week, weekend } from '@/helpers/date';
@@ -263,4 +265,8 @@ function resetDates() {
   activeFilters.startsAt = null;
   activeFilters.endsAt = null;
 }
+
+const handleQueryChange = useDebounceFn((value: string) => {
+  activeFilters.query = value;
+}, 500);
 </script>

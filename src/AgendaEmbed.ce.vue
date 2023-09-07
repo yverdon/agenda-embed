@@ -17,8 +17,19 @@ import { IconoirProvider } from '@iconoir/vue';
 import { createApp, getCurrentInstance } from 'vue';
 import { RouterView } from 'vue-router';
 
+import { activeFilters } from '@/composables/useFilters';
+
+const props = defineProps<{
+  domain: 'sports' | 'culture';
+}>();
+
+// Explicitely not `useFilter()` here as it triggers the router in the background
+// but it’s not initialized yet
+activeFilters.domain = props.domain;
+
 /**
  * Encapsulate the whole app inside the Web Component
+ * essentially to have the router, which requires an app
  */
 
 const app = createApp({});

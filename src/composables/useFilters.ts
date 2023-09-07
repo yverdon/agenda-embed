@@ -1,9 +1,10 @@
 import { reactive, ref, watch } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 import type { EventFilter } from '../services/eventsService';
 
 export type ActiveFilters = {
+  domain: string | null;
   query: string;
   startsAt: string | null;
   endsAt: string | null;
@@ -11,7 +12,8 @@ export type ActiveFilters = {
 };
 
 const availableFilters = ref<EventFilter[]>([]);
-const activeFilters = reactive<ActiveFilters>({
+export const activeFilters = reactive<ActiveFilters>({
+  domain: null,
   query: '',
   startsAt: null,
   endsAt: null,
@@ -20,12 +22,27 @@ const activeFilters = reactive<ActiveFilters>({
 
 export default function useFilters() {
   const router = useRouter();
+  const route = useRoute();
 
   watch(
-    () => activeFilters,
+    activeFilters,
     () => {
-      const { categories, ...otherFilters } = activeFilters;
-      router.replace({ query: { ...otherFilters, ...categories } });
+      // Purposefuly do not persist `domain` in the URL, its an internal filter
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { domain, categories, ...otherFilters } = activeFilters;
+      const query = { ...otherFilters, ...categories };
+
+      Object.entries(query).forEach(([key, value]) => {
+        if (!value || value.length === 0) {
+          delete query[key as keyof typeof query];
+        }
+      });
+
+      // Avoid triggering router navigation if nothing changed
+      // it tends to freak out the scroll behavior
+      if (JSON.stringify(route.query) !== JSON.stringify(query)) {
+        router.replace({ query: query });
+      }
     },
     {
       deep: true,
