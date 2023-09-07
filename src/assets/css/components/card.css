@@ -1,13 +1,28 @@
 .card {
   color: inherit;
 
+  background-color: var(--agd-card-bg-color, var(--agd-color-depth));
+
   &:hover {
     text-decoration: none;
   }
 }
 
-.card__media {
+.card--featured {
+  --agd-btn-secondary-color: var(
+    --agd-card-featured-bg-color,
+    var(--agd-color-primary)
+  );
+
+  color: var(--agd-card-featured-color, var(--agd-text-color-negative));
+
+  background-color: var(--agd-card-featured-bg-color, var(--agd-color-primary));
+}
+
+.card .card__media {
   position: relative;
+
+  background-color: var(--agd-card-media-bg-color, var(--agd-color-depth-dark));
 
   &::before {
     content: '';
