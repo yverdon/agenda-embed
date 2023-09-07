@@ -6,6 +6,7 @@ import type { RawEventLightProps } from './EventLight';
 import EventLight from './EventLight';
 
 export type RawEventOrganizer = {
+  name: string | null;
   address: string | null;
   phone: string | null;
   email: string | null;

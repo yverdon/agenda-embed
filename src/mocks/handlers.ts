@@ -10,7 +10,7 @@ import {
 import events from './fixtures/events';
 import eventsLight from './fixtures/eventsLight';
 
-const PAGINATION_SIZE = 3;
+const PAGINATION_SIZE = 8;
 
 export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
   rest.get('/api/events', (req, res, ctx) => {

@@ -108,6 +108,71 @@ const features: RawEventLight[] = [
       featured: false,
     },
   },
+  {
+    type: 'Feature',
+    properties: {
+      id: 7,
+      title: 'Blaise Bersinger - Pain Surprise',
+      poster: {
+        src: '/uploads/Blaise-Bersinger_Pain-surprise_cA-la-Volette-1365x2048.jpg',
+        width: 1365,
+        height: 2048,
+      },
+      starts_at: '2023-09-22',
+      ends_at: '2023-09-22',
+      location: 'L’Échandole',
+      status: EventStatus.SOLDOUT,
+      featured: false,
+    },
+  },
+  {
+    type: 'Feature',
+    properties: {
+      id: 8,
+      title: 'Spark 1400',
+      poster: {
+        src: '/uploads/spark1400.jpg',
+        width: 730,
+        height: 410,
+      },
+      starts_at: '2023-09-13',
+      ends_at: '2023-10-21',
+      location: 'Centre sportif des Isles',
+      status: null,
+      featured: false,
+    },
+  },
+  {
+    type: 'Feature',
+    properties: {
+      id: 9,
+      title: 'Festival Source Concept',
+      poster: {
+        src: '/uploads/source-concept.jpg',
+        width: 1000,
+        height: 1412,
+      },
+      starts_at: '2023-09-15',
+      ends_at: '2023-09-15',
+      location: 'Salle de la Marive',
+      status: null,
+      featured: false,
+    },
+  },
+  {
+    type: 'Feature',
+    properties: {
+      id: 10,
+      title:
+        'Soirée d’information TRAVYS – renouvellement des voies en Chamard',
+      poster: null,
+      starts_at: '2023-09-14',
+      ends_at: '2023-09-14',
+      location: null,
+      status: null,
+      featured: false,
+    },
+  },
 ];
 
 const filters: EventFilter[] = [
@@ -203,6 +268,10 @@ const filters: EventFilter[] = [
         id: 7,
         label: 'Installation',
       },
+      {
+        id: 8,
+        label: 'Compétition',
+      },
     ],
   },
   {
@@ -236,6 +305,10 @@ const filters: EventFilter[] = [
       {
         id: 7,
         label: 'Artisanat & Tradition',
+      },
+      {
+        id: 8,
+        label: 'Sport',
       },
     ],
   },
