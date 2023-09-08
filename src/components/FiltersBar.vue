@@ -24,65 +24,7 @@
       class="filters-bar__collapse p-5 bg-depth"
     />
 
-    <fieldset class="max-lg:hidden flex gap-x-1">
-      <legend class="sr-only">Raccourci dates</legend>
-      <label
-        for="today"
-        class="btn btn--secondary"
-        :class="{ active: quickDate === 'today' }"
-      >
-        <input
-          id="today"
-          v-model="quickDate"
-          type="radio"
-          value="today"
-          name="quick-dates"
-        />
-        Aujourd’hui
-      </label>
-      <label
-        for="tomorrow"
-        class="btn btn--secondary"
-        :class="{ active: quickDate === 'tomorrow' }"
-      >
-        <input
-          id="tomorrow"
-          v-model="quickDate"
-          type="radio"
-          value="tomorrow"
-          name="quick-dates"
-        />
-        Demain
-      </label>
-      <label
-        for="weekend"
-        class="btn btn--secondary"
-        :class="{ active: quickDate === 'weekend' }"
-      >
-        <input
-          id="weekend"
-          v-model="quickDate"
-          type="radio"
-          value="weekend"
-          name="quick-dates"
-        />
-        Ce week-end
-      </label>
-      <label
-        for="week"
-        class="btn btn--secondary"
-        :class="{ active: quickDate === 'week' }"
-      >
-        <input
-          id="week"
-          v-model="quickDate"
-          type="radio"
-          value="week"
-          name="quick-dates"
-        />
-        Cette semaine
-      </label>
-    </fieldset>
+    <FiltersQuickDates id="primary" v-model="quickDate" class="max-xl:hidden" />
 
     <button
       type="button"
@@ -105,9 +47,11 @@
     <div
       v-show="datesOpen"
       id="dates-collapse"
-      class="filters-bar__collapse p-5 bg-depth"
+      class="filters-bar__collapse grid gap-3"
     >
-      <div class="flex flex-wrap items-end gap-6 lg:gap-x-12">
+      <FiltersQuickDates id="secondary" v-model="quickDate" class="xl:hidden" />
+
+      <div class="flex flex-wrap items-end gap-6 lg:gap-x-12 p-5 bg-depth">
         <div class="flex-auto w-full md:w-auto md:max-w-[220px]">
           <label for="date-from" class="block mb-3 font-bold text-lg">
             Date de début
@@ -155,7 +99,7 @@
           type="search"
           name="search"
           placeholder="Rechercher"
-          class="field px-10"
+          class="field px-10 md:max-w-[200px]"
           @input="handleQueryChange(($event.target as HTMLInputElement).value)"
         />
         <Search class="absolute left-3 pointer-events-none" />
@@ -183,6 +127,7 @@ import { today, tomorrow, week, weekend } from '@/helpers/date';
 import useFilters from '../composables/useFilters';
 
 import Filters from './Filters.vue';
+import FiltersQuickDates from './FiltersQuickDates.vue';
 
 const filtersOpen = ref(false);
 const datesOpen = ref(false);

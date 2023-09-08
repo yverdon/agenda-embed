@@ -2,7 +2,7 @@
   grid-template-columns: 1fr auto;
   align-items: stretch;
 
-  @screen lg {
+  @screen md {
     grid-template-columns: auto auto auto 1fr auto;
   }
 }
@@ -20,7 +20,7 @@
 .filters-bar__search {
   grid-column: 1 / -1;
 
-  @screen lg {
+  @screen md {
     grid-column-start: 5;
   }
 }
