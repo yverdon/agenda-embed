@@ -23,7 +23,7 @@ const events: RawEvent[] = [
         'Découvrez la première édition de festival hip-hop Source Concept, le 15 septembre à la salle de La Marive. Au programme, les rappeurs français Coelho et Warend, ainsi que les artistes helvètes VVS Panther, Antoino, Ymyk & Amoor & Soliloquio qui mettront en avant la scène hip-hop suisse. Pour clôturer la soirée, le talentueux Santo sera aux platines pour l’after Party.\n\nDe la découverte de nouveaux·elles talents aux artistes confirmé·e·s, chaque moment de cette soirée vous fera découvrir sa richesse artistique.',
       pricing:
         'À l’exception du concert de Niklas Paschburg au Temple et du brunch du dimanche, les événements du festival sont gratuits.',
-      website: 'https://www.le-castrum.ch/',
+      website: 'https://infomaniak.events/shop/EKGwwgxiNR/',
       schedule:
         '14.08: Apéritif de bienvenue dès 18h\n15.08: 11h à 04h du matin\n16.08: 12h à 04h du matin\n17.08: 11h à 5h du matin\n18.08: 12h à 17h',
       organizer: {
@@ -111,7 +111,7 @@ const events: RawEvent[] = [
       ends_at: '2023-08-18',
       location: 'Au bord du lac',
       location_details: 'Au bord du lac',
-      status: null,
+      status: EventStatus.SOLDOUT,
       featured: false,
       summary:
         'À cheval entre lieu culturel et buvette estivale, La Dérivée anime le bord du lac de Neuchâtel à Yverdon-les-Bains, en journée comme en soirée, du jeudi au dimanche, de juin à août. Concerts, ateliers découvertes, sports, cinéma open-air, expositions, ateliers enfants, arts-vivants, DJ-set… La Dérivée c’est plus d’une centaine d’activités et d’événements proposés en collaboration avec une multitude d’associations, institutions et collectifs.',

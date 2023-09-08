@@ -15,4 +15,13 @@ module.exports = {
   rules: {
     'vue/multi-word-component-names': 'off',
   },
+  overrides: [
+    {
+      files: ['**/cypress/**/*', '**/*.cy.tsx'],
+      plugins: ['cypress'],
+      env: {
+        'cypress/globals': true,
+      },
+    },
+  ],
 };

@@ -53,27 +53,27 @@
 
       <div class="flex flex-wrap items-end gap-6 lg:gap-x-12 p-5 bg-depth">
         <div class="flex-auto w-full md:w-auto md:max-w-[220px]">
-          <label for="date-from" class="block mb-3 font-bold text-lg">
+          <label for="starts-at" class="block mb-3 font-bold text-lg">
             Date de début
           </label>
           <input
-            id="date-from"
+            id="starts-at"
             v-model="activeFilters.startsAt"
             type="date"
-            name="date-from"
+            name="starts-at"
             class="field"
           />
         </div>
 
         <div class="flex-auto w-full md:w-auto md:max-w-[220px]">
-          <label for="date-from" class="block mb-3 font-bold text-lg">
+          <label for="ends-at" class="block mb-3 font-bold text-lg">
             Date de fin
           </label>
           <input
-            id="date-to"
+            id="ends-at"
             v-model="activeFilters.endsAt"
             type="date"
-            name="date-to"
+            name="ends-at"
             class="field"
           />
         </div>
