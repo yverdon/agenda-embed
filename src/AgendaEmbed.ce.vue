@@ -20,12 +20,14 @@ import { RouterView } from 'vue-router';
 import { activeFilters } from '@/composables/useFilters';
 
 const props = defineProps<{
-  domain: 'sports' | 'culture';
+  domain?: 'sports' | 'culture';
 }>();
 
 // Explicitely not `useFilter()` here as it triggers the router in the background
 // but it’s not initialized yet
-activeFilters.domain = props.domain;
+if (props.domain) {
+  activeFilters.domain = props.domain;
+}
 
 /**
  * Encapsulate the whole app inside the Web Component
