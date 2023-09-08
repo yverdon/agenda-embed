@@ -42,7 +42,7 @@
 .btn--icon {
   padding: theme('spacing.2');
 
-  border-radius: var(--agd-border-radius);
+  border-radius: var(--agd-btn-icon-border-radius, var(--agd-border-radius));
 
   @screen md {
     padding: theme('spacing.3');
