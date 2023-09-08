@@ -1,0 +1,43 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  style-and-types:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate code styling
+        run: npm run validate
+      - name: Check types
+        run: npm run type-check
+
+  cypress:
+    runs-on: ubuntu-22.04
+
+    container:
+      image: cypress/browsers:node18.12.0-chrome106-ff106
+      options: --user 1001
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm start
+          browser: chrome
