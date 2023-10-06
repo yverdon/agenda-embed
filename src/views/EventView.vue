@@ -81,26 +81,26 @@
         <EventPicture :poster="event.poster" class="hidden md:block" />
 
         <div
-          v-if="event instanceof Event && event.organizer"
+          v-if="event instanceof Event && event.hasOrganizer"
           class="mt-8 grid gap-3"
         >
           <h3 class="text-3xl">Organisateur</h3>
-          <div v-if="event.organizer.name">
-            {{ event.organizer.name }}
+          <div v-if="event.organizerName">
+            {{ event.organizerName }}
           </div>
-          <div v-if="event.organizer.address" class="whitespace-pre-line">
-            {{ event.organizer.address }}
+          <div v-if="event.organizerAddress" class="whitespace-pre-line">
+            {{ event.organizerAddress }}
           </div>
-          <div v-if="event.organizer.phone">
-            {{ event.organizer.phone }}
+          <div v-if="event.organizerPhone">
+            {{ event.organizerPhone }}
           </div>
-          <div v-if="event.organizer.email">
-            <a :href="`mailto:${event.organizer.email}`">{{
-              event.organizer.email
+          <div v-if="event.organizerEmail">
+            <a :href="`mailto:${event.organizerEmail}`">{{
+              event.organizerEmail
             }}</a>
           </div>
-          <div v-if="event.organizer.website">
-            <a :href="event.organizer.website" target="_blank">{{
+          <div v-if="event.organizerWebsite">
+            <a :href="event.organizerWebsite" target="_blank">{{
               event.organizerWebsiteFormatted
             }}</a>
           </div>

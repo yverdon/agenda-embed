@@ -26,13 +26,11 @@ const events: RawEvent[] = [
       website: 'https://infomaniak.events/shop/EKGwwgxiNR/',
       schedule:
         '14.08: Apéritif de bienvenue dès 18h\n15.08: 11h à 04h du matin\n16.08: 12h à 04h du matin\n17.08: 11h à 5h du matin\n18.08: 12h à 17h',
-      organizer: {
-        name: 'Association Castrum & Cie',
-        address: 'Avenue des Sports 5\n1400 Yverdon-les-Bains',
-        phone: '+41 24 423 64 20',
-        email: 'info@le-castrum.ch',
-        website: 'https://www.le-castrum.ch/',
-      },
+      organizer_name: 'Association Castrum & Cie',
+      organizer_address: 'Avenue des Sports 5\n1400 Yverdon-les-Bains',
+      organizer_phone: '+41 24 423 64 20',
+      organizer_email: 'info@le-castrum.ch',
+      organizer_website: 'https://www.le-castrum.ch/',
       categories: {
         publics: {
           label: 'Publics',
@@ -118,7 +116,11 @@ const events: RawEvent[] = [
       pricing: 'Gratuit',
       website: 'https://www.laderivee.ch/',
       schedule: null,
-      organizer: null,
+      organizer_name: null,
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: {
         publics: {
           label: 'Publics',
@@ -187,7 +189,11 @@ const events: RawEvent[] = [
       pricing: null,
       website: null,
       schedule: null,
-      organizer: null,
+      organizer_name: null,
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: {
         publics: {
           label: 'Publics',
@@ -249,7 +255,11 @@ const events: RawEvent[] = [
       pricing: null,
       website: null,
       schedule: null,
-      organizer: null,
+      organizer_name: null,
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: {
         publics: {
           label: 'Publics',
@@ -311,7 +321,11 @@ const events: RawEvent[] = [
       pricing: null,
       website: null,
       schedule: null,
-      organizer: null,
+      organizer_name: null,
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: null,
     },
   },
@@ -336,7 +350,11 @@ const events: RawEvent[] = [
       pricing: null,
       website: null,
       schedule: null,
-      organizer: null,
+      organizer_name: null,
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: null,
     },
   },
@@ -361,13 +379,11 @@ const events: RawEvent[] = [
       pricing: '32.- / 25.- / 15.- / 10.- / 5.-',
       website: 'https://echandole.ch/spectacles/blaise-bersinger/',
       schedule: '20h30',
-      organizer: {
-        name: 'L’Échandole',
-        address: 'Le Château\n1401 Yverdon-les-Bains',
-        email: 'echandole@yverdon-les-bains.ch',
-        phone: '+41 (0)24 423 65 78',
-        website: 'https://echandole.ch/',
-      },
+      organizer_name: 'L’Échandole',
+      organizer_address: 'Le Château\n1401 Yverdon-les-Bains',
+      organizer_email: 'echandole@yverdon-les-bains.ch',
+      organizer_phone: '+41 (0)24 423 65 78',
+      organizer_website: 'https://echandole.ch/',
       categories: {
         publics: {
           label: 'Publics',
@@ -433,7 +449,11 @@ const events: RawEvent[] = [
       pricing: 'Gratuit',
       website: 'https://spark-vaud.ch/',
       schedule: 'Dès 12h, 7 jours sur 7',
-      organizer: null,
+      organizer_name: null,
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: {
         publics: {
           label: 'Publics',
@@ -497,13 +517,11 @@ const events: RawEvent[] = [
       website:
         'https://www.petzi.ch/fr/events/53057-y-music-source-concept-coelho-warend-vvs-panther-antoino/',
       schedule: 'Dès 19h00',
-      organizer: {
-        name: 'Y Music',
-        address: null,
-        phone: null,
-        email: null,
-        website: null,
-      },
+      organizer_name: 'Y Music',
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: {
         publics: {
           label: 'Publics',
@@ -566,7 +584,11 @@ const events: RawEvent[] = [
       pricing: null,
       website: null,
       schedule: null,
-      organizer: null,
+      organizer_name: null,
+      organizer_address: null,
+      organizer_phone: null,
+      organizer_email: null,
+      organizer_website: null,
       categories: null,
     },
   },
