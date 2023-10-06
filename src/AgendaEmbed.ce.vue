@@ -17,16 +17,23 @@ import { IconoirProvider } from '@iconoir/vue';
 import { createApp, getCurrentInstance } from 'vue';
 import { RouterView } from 'vue-router';
 
+import { API_BASE_URL } from '@/helpers/options';
+
 import { activeFilters } from '@/composables/useFilters';
 
 const props = defineProps<{
   domain?: 'sports' | 'culture';
+  apiBaseUrl?: string;
 }>();
 
 // Explicitely not `useFilter()` here as it triggers the router in the background
 // but it’s not initialized yet
 if (props.domain) {
   activeFilters.domain = props.domain;
+}
+
+if (props.apiBaseUrl) {
+  API_BASE_URL.value = props.apiBaseUrl;
 }
 
 /**

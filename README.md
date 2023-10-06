@@ -9,9 +9,6 @@ Web component to browse, filter and search events; including a detail view.
 Embed the web component directly in an HTML page:
 
 ```html
-<!-- Render the component -->
-<agenda-embed></agenda-embed>
-
 <!-- Customize the style -->
 <style>
   agenda-embed {
@@ -23,11 +20,14 @@ Embed the web component directly in an HTML page:
   }
 </style>
 
+<!-- Render the component -->
+<agenda-embed></agenda-embed>
+
 <!-- Initialize the component -->
 <script type="module" src="/path/to/agenda-embed.js"></script>
 ```
 
-### Domain: filter the events displayed
+### Filter events displayed by domain
 
 You can globally restrict the widget to events of a given domain by using the `domain` attribute on the component:
 
@@ -36,3 +36,18 @@ You can globally restrict the widget to events of a given domain by using the `d
 ```
 
 To display events from all domains, don’t specify this attribute.
+
+### Customize the API target
+
+Specify the `api-base-url` attribute to use a different API target:
+
+```html
+<agenda-embed api-base-url="https://www.yourdomain.ch/api"></agenda-embed>
+```
+
+This parameter is optional, `https://geocity.ch/rest` is the default.
+
+The end-points called by the widget are:
+
+- GET `/agenda` for the list of events
+- GET `/agenda/:id` for the event details

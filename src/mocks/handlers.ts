@@ -13,7 +13,7 @@ import eventsLight from './fixtures/eventsLight';
 const PAGINATION_SIZE = 8;
 
 export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
-  rest.get('/api/events', (req, res, ctx) => {
+  rest.get('/api/agenda', (req, res, ctx) => {
     const events = cloneDeep(eventsLight);
 
     /**
@@ -54,19 +54,19 @@ export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
     events.features = events.features.slice(startIndex, endIndex);
 
     if (page !== 1) {
-      events.previous = `/api/events/?page=${page - 1}`;
+      events.previous = `/api/agenda/?page=${page - 1}`;
     }
 
     const totalPages = Math.ceil(events.count / PAGINATION_SIZE);
 
     if (page < totalPages) {
-      events.next = `/api/events/?page=${page + 1}`;
+      events.next = `/api/agenda/?page=${page + 1}`;
     }
 
     return res(ctx.delay(300), ctx.status(200), ctx.json(events));
   }),
 
-  rest.get('/api/events/:id', (req, res, ctx) => {
+  rest.get('/api/agenda/:id', (req, res, ctx) => {
     const event = events.find((e) => e.properties.id === Number(req.params.id));
     if (event) {
       return res(ctx.delay(300), ctx.status(200), ctx.json(event));

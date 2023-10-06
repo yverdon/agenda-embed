@@ -1,10 +1,11 @@
+import { API_BASE_URL } from '@/helpers/options';
 import { buildParams } from '@/helpers/url';
 
-import type { ActiveFilters } from '../composables/useFilters';
+import type { ActiveFilters } from '@/composables/useFilters';
 
 import type { FeatureCollectionPaginated } from '@/services/types';
 
-import Event, { type RawEvent } from '../models/Event';
+import Event, { type RawEvent } from '@/models/Event';
 import EventLight, { type RawEventLight } from '@/models/EventLight';
 
 export type EventFilterOption = {
@@ -31,7 +32,7 @@ export const getEvents = ({ filters, page }: GetEventsOptions) => {
   const { categories, ...otherFilters } = filters;
   const params = buildParams({ ...categories, ...otherFilters, page });
 
-  return fetch(`/api/events?${params}`)
+  return fetch(`${API_BASE_URL.value}/agenda?${params}`)
     .then((response) => response.json())
     .then((json: EventsCollection) => {
       return {
@@ -44,7 +45,7 @@ export const getEvents = ({ filters, page }: GetEventsOptions) => {
 };
 
 export const getEvent = (id: string) => {
-  return fetch(`/api/events/${id}`)
+  return fetch(`${API_BASE_URL.value}/agenda/${id}`)
     .then((response) => response.json())
     .then((json: RawEvent) => {
       return new Event(json);
