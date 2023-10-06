@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "license": "GPL-3.0-only",
+  "browser": "dist/agenda-embed.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "vite",
     "build": "run-p type-check build-only",

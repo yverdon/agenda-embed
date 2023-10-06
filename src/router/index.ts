@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
+import EventView from '@/views/EventView.vue';
 import EventsView from '@/views/EventsView.vue';
 
 const router = createRouter({
@@ -14,7 +15,7 @@ const router = createRouter({
     {
       path: '/event/:id',
       name: 'event',
-      component: () => import('../views/EventView.vue'),
+      component: EventView,
     },
   ],
 
